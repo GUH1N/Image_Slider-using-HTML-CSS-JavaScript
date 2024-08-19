@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image_slider</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Slider :-</h1>
+    <div class="image_container">
+        <img src="./image/anime-8788959_1280.jpg" alt="Image 1">
+        <img src="./image/forest-7922999_1280.jpg" alt="Image 2">
+        <img src="./image/pharmacy-8812002_1280.jpg" alt="Image 3">
+    </div>
+    </div>
+        <script>
+            const images = document.querySelectorAll('.image_container img');
+            
+            let currentIndex = 0;
+            const intervalTime = 5000; 
+           
+            function changeImage() {
+                images[currentIndex].classList.remove('active');
+                
+                currentIndex = (currentIndex + 1) % images.length;
+                
+                images[currentIndex].classList.add('active');
+            }
+
+            changeImage();
+            setInterval(changeImage, intervalTime);
+        </script>
+</body>
+</html>

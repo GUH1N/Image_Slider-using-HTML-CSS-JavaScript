@@ -1,0 +1,29 @@
+.image_container img {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.image_container img.active {
+    display: block;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+.image_container
+{
+    border: 5px solid #000;
+    width: 700px;
+    height: 500px;
+}
+.container
+{
+    color:cadetblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 100px;
+}
